@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elie's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            transition: background 0.5s ease-in-out;
+        }
+        header {
+            background: #0d0d0d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+            background: #292929;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #0d0d0d;
+            color: white;
+            margin-top: 20px;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .project a {
+            color: #4db8ff;
+            text-decoration: none;
+        }
+        .dark-mode {
+            background-color: #ffffff;
+            color: #333;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            padding: 10px;
+            background: #4db8ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Elie's Portfolio</h1>
+        <p>Data Analyst | AI Enthusiast</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio! I am a data analyst passionate about extracting insights from data, performing financial analysis, and building AI-driven solutions.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Customer Segmentation & Sales Insights</h3>
+                <p>Analyzed customer behavior and sales trends using RFM modeling.</p>
+                <a href="https://github.com/ndjichou-elie/data-analysis-portfolio/raw/refs/heads/main/Customer_Segmentation_Project.xlsx" target="_blank">View Report</a>
+            </div>
+            <div class="project">
+                <h3>Financial Analysis & Risk Assessment</h3>
+                <p>Conducted profit/loss evaluations, risk assessments, and stock price forecasting.</p>
+                <a href="https://github.com/ndjichou-elie/data-analysis-portfolio/raw/refs/heads/main/Financial_Analysis_Project.xlsx" target="_blank">View Report</a>
+            </div>
+            <div class="project">
+                <h3>Social Media Sentiment Analysis</h3>
+                <p>NLP-based sentiment analysis to track market trends.</p>
+                <a href="https://github.com/ndjichou-elie/data-analysis-portfolio/raw/refs/heads/main/Social_Media_Sentiment_Analysis.xlsx" target="_blank">View Report</a>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p><a href="#">Download Resume (PDF)</a></p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:elie.ndjichou@facsciences-uy1.cm">elie.ndjichou@facsciences-uy1.cm</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/Ndjichou-Elie" target="_blank">Ndjichou Elie</a></p>
+            <p>Phone: +237 655178911</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Elie. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
