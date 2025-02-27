@@ -50,8 +50,8 @@ This repository contains my **Data Analysis Portfolio**, showcasing real-world p
 ---
 
 👨‍💻 **Connect with Me**  
-📧 **Email**: your_email@example.com  
-🔗 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+📧 **Email**: elie.ndjichou@facsciences-uy1.cm 
+🔗 **LinkedIn**: ndjichou elie 
 🐍 **GitHub**: [github.com/ndjichou-elie](https://github.com/ndjichou-elie)  
 
 🚀 **Hope you enjoy my work! Feedback is always welcome.** 🎉
