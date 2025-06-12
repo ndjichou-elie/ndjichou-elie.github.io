@@ -4,46 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elie The Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
             background-color: #1e1e1e;
             color: #ffffff;
             transition: background 0.5s ease-in-out;
+            scroll-behavior: smooth;
         }
         header {
             background: #0d0d0d;
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
+        header img {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 15px;
+        }
         nav {
-            text-align: center;
-            padding: 10px;
+            display: flex;
+            justify-content: center;
             background: #292929;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
+            margin: 10px 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4db8ff;
         }
         .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 30px auto;
             background: #333;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255,255,255,0.08);
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        section + section {
+            margin-top: 40px;
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background: #0d0d0d;
             color: white;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         .project img {
             width: 100%;
@@ -53,20 +78,33 @@
             color: #4db8ff;
             text-decoration: none;
         }
-        .dark-mode {
-            background-color: #ffffff;
-            color: #333;
-        }
         .toggle-btn {
             cursor: pointer;
-            padding: 10px;
+            padding: 10px 20px;
             background: #4db8ff;
             color: white;
             border: none;
             border-radius: 5px;
             font-size: 16px;
-            display: block;
             margin: 20px auto;
+            display: block;
+        }
+        .dark-mode {
+            background-color: #ffffff;
+            color: #333;
+        }
+        .contact-icons i {
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            nav a {
+                margin: 10px;
+                font-size: 14px;
+            }
+            .container {
+                padding: 15px;
+                margin: 20px;
+            }
         }
     </style>
     <script>
@@ -77,7 +115,7 @@
 </head>
 <body>
     <header>
-        <img src="elie.jpg" alt="Elie's Profile Picture" style="display: block; margin: 0 auto; border-radius: 50%; width: 150px; height: 150px;" />
+        <img src="elie.jpg" alt="Elie's Profile Picture" />
         <h1>Elie The Analyst</h1>
         <p>Data Analyst | AI Enthusiast</p>
     </header>
@@ -91,7 +129,11 @@
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a data analyst passionate about extracting insights from data, performing financial analysis, and building AI-driven solutions.</p>
+            <p>
+                Welcome to my portfolio! I am a data analyst passionate about extracting insights from data, performing financial analysis, and building AI-driven solutions. 
+                With a strong background in data wrangling, statistical modeling, and dashboard creation, I thrive on transforming complex information into clear, actionable strategies. 
+                I enjoy working on real-world projects and continuously expanding my skills in machine learning, Python, Power BI, and web technologies.
+            </p>
         </section>
         <section id="projects">
             <h2>Projects</h2>
@@ -122,9 +164,9 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:elie.ndjichou@facsciences-uy1.cm">elie.ndjichou@facsciences-uy1.cm</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/Ndjichou-Elie" target="_blank">Ndjichou Elie</a></p>
-            <p>Phone: +237 655178911</p>
+            <p class="contact-icons"><i class="fas fa-envelope"></i> <a href="mailto:elie.ndjichou@facsciences-uy1.cm">elie.ndjichou@facsciences-uy1.cm</a></p>
+            <p class="contact-icons"><i class="fas fa-envelope"></i> <a href="mailto:eliendjichou@gmail.com">eliendjichou@gmail.com</a></p>
+            <p class="contact-icons"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/Ndjichou-Elie" target="_blank">Ndjichou Elie</a></p>
         </section>
     </div>
     <footer>
