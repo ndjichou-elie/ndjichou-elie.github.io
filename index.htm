@@ -1,121 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elie The Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-KgK2+3KX4CZhVQz4qO4R5dDNpWTnG2XZG0/28e9Rlx1s4YOi+ixvYH0GweV+K+Y1o+EvG7D4sjl+T3Bfez+Gxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #1e1e1e;
-            color: #ffffff;
-            transition: background 0.5s ease-in-out;
-            scroll-behavior: smooth;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
         }
+
         header {
             background: #0d0d0d;
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
+
         header img {
             border-radius: 50%;
-            width: 140px;
-            height: 140px;
-            margin-bottom: 15px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
+
         nav {
-            display: flex;
-            justify-content: center;
             background: #292929;
-            flex-wrap: wrap;
+            text-align: center;
+            padding: 10px;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin: 10px 15px;
-            font-size: 16px;
-            transition: color 0.3s;
+            margin: 0 15px;
+            font-size: 18px;
         }
-        nav a:hover {
-            color: #4db8ff;
-        }
+
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #333;
-            padding: 25px;
+            max-width: 960px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255,255,255,0.08);
-            animation: fadeIn 1s ease-in;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        section {
+            margin-bottom: 40px;
         }
-        section + section {
-            margin-top: 40px;
+
+        h2 {
+            color: #0d0d0d;
+            margin-bottom: 10px;
         }
+
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .project a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
         footer {
             text-align: center;
             padding: 15px;
             background: #0d0d0d;
             color: white;
-            margin-top: 40px;
         }
-        .project img {
-            width: 100%;
-            border-radius: 5px;
-        }
-        .project a {
-            color: #4db8ff;
-            text-decoration: none;
-        }
-        .toggle-btn {
-            cursor: pointer;
-            padding: 10px 20px;
-            background: #4db8ff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            margin: 20px auto;
-            display: block;
-        }
-        .dark-mode {
-            background-color: #ffffff;
-            color: #333;
-        }
-        .contact-icons i {
+
+        .contact-info i {
             margin-right: 10px;
         }
+
+        a {
+            color: #007BFF;
+        }
+
         @media (max-width: 768px) {
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
             nav a {
-                margin: 10px;
-                font-size: 14px;
+                display: inline-block;
+                margin: 10px 8px;
             }
+
             .container {
-                padding: 15px;
-                margin: 20px;
+                margin: 10px;
             }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
         }
     </style>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
 </head>
+
 <body>
     <header>
-        <img src="elie.jpg" alt="Elie's Profile Picture" />
+        <img src="elie.jpg" alt="Elie's Profile Picture">
         <h1>Elie The Analyst</h1>
         <p>Data Analyst | AI Enthusiast</p>
     </header>
@@ -125,17 +133,13 @@
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
     </nav>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     <div class="container">
-        <section id="about">
+        <section id="about" class="fade-in">
             <h2>About Me</h2>
-            <p>
-                Welcome to my portfolio! I am a data analyst passionate about extracting insights from data, performing financial analysis, and building AI-driven solutions. 
-                With a strong background in data wrangling, statistical modeling, and dashboard creation, I thrive on transforming complex information into clear, actionable strategies. 
-                I enjoy working on real-world projects and continuously expanding my skills in machine learning, Python, Power BI, and web technologies.
-            </p>
+            <p>Hello and welcome! I'm Elie, a passionate data analyst and AI enthusiast dedicated to turning complex data into valuable insights. I specialize in financial analysis, customer segmentation, predictive modeling, and AI-powered solutions. My goal is to bridge the gap between raw data and strategic decisions by using modern tools and innovative thinking. Whether it's helping businesses grow or discovering hidden patterns, I thrive on solving data challenges with creativity and precision.</p>
         </section>
-        <section id="projects">
+
+        <section id="projects" class="fade-in">
             <h2>Projects</h2>
             <div class="project">
                 <h3>Customer Segmentation & Sales Insights</h3>
@@ -158,19 +162,50 @@
                 <a href="https://github.com/ndjichou-elie/ndjichou-elie.github.io/blob/main/book-price-analysis/book-price-analysis.ipynb" target="_blank">View Notebook</a>
             </div>
         </section>
-        <section id="resume">
+
+        <section id="resume" class="fade-in">
             <h2>Resume</h2>
             <p><a href="https://github.com/ndjichou-elie/data-analysis-portfolio/raw/refs/heads/main/NDJICHOU_ELIE_Resume.pdf" target="_blank">Download Resume (PDF)</a></p>
         </section>
-        <section id="contact">
+
+        <section id="contact" class="fade-in">
             <h2>Contact</h2>
-            <p class="contact-icons"><i class="fas fa-envelope"></i> <a href="mailto:elie.ndjichou@facsciences-uy1.cm">elie.ndjichou@facsciences-uy1.cm</a></p>
-            <p class="contact-icons"><i class="fas fa-envelope"></i> <a href="mailto:eliendjichou@gmail.com">eliendjichou@gmail.com</a></p>
-            <p class="contact-icons"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/Ndjichou-Elie" target="_blank">Ndjichou Elie</a></p>
+            <p class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:elie.ndjichou@facsciences-uy1.cm">elie.ndjichou@facsciences-uy1.cm</a>
+            </p>
+            <p class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:eliendjichou@gmail.com">eliendjichou@gmail.com</a>
+            </p>
+            <p class="contact-info">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://linkedin.com/in/Ndjichou-Elie" target="_blank">Ndjichou Elie</a>
+            </p>
         </section>
     </div>
     <footer>
         <p>&copy; 2025 Elie. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
+
 </html>
